@@ -30,6 +30,19 @@ variable "instance_type" {
   default     = "t2.micro"
 }
 
+
+variable "ingress_ports" {
+  description = "List of ingress ports"
+  type        = list(number)
+  default     = [22, 8081, 8082, 8083]
+}
+
+variable "prefix" {
+  description = "Prefix for naming resources"
+  type        = string
+  default     = "docker-ecr"
+}
+
 # variable "subnet_id" {
 #   description = "Subnet ID"
 #   type        = string
