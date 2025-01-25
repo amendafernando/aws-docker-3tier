@@ -1,9 +1,9 @@
 output "vpc_id" {
-  value = aws_default_vpc.default.id
+  value = aws_vpc.vpc
 }
 
 output "subnet_id" {
-  value = aws_default_subnet.default_az1.id
+  value = aws_subnet.public_subnet_1
 }
 
 output "security_group_id" {
