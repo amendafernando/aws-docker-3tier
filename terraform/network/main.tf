@@ -6,7 +6,7 @@ resource "aws_vpc" "vpc" {
 }
 
 resource "aws_subnet" "public_subnet_1" {
-  vpc_id            = module.vpc.vpc_id
+  vpc_id            = aws_vpc.vpc.id
   cidr_block        = var.public_subnet_cidrs[0]
   availability_zone = "us-east-1a"
 
@@ -20,12 +20,12 @@ resource "aws_route_table_association" "public_association_1" {
 
 
 resource "aws_internet_gateway" "igw" {
-  vpc_id = module.vpc.vpc_id
+  vpc_id = aws_vpc.vpc.id
   tags   = merge(var.default_tags, { Name = "${var.prefix}-igw" })
 }
 
 resource "aws_route_table" "public" {
-  vpc_id = module.vpc.vpc_id
+  vpc_id = aws_vpc.vpc.id
   route {
     cidr_block = "0.0.0.0/0"
     gateway_id = aws_internet_gateway.igw.id
@@ -36,7 +36,7 @@ resource "aws_route_table" "public" {
 resource "aws_security_group" "allow_web" {
   name        = "${var.prefix}-allow-web"
   description = "Allow web traffic"
-  vpc_id      = aws_default_vpc.default.id
+  vpc_id      = aws_vpc.vpc.id
 
   dynamic "ingress" {
     for_each = var.ingress_ports
