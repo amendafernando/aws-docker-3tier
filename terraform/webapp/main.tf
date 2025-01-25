@@ -1,8 +1,8 @@
 resource "aws_instance" "app_server" {
   ami           = var.ami_id
   instance_type = var.instance_type
-  subnet_id     = var.subnet_id
-  vpc_security_group_ids = [var.security_group_id]
+  subnet_id     = data.terraform_remote_state.remote_data.outputs.subnet_id
+  vpc_security_group_ids = [data.terraform_remote_state.remote_data.outputs.security_group_id]
  
   user_data = <<-EOF
               #!/bin/bash
@@ -17,3 +17,6 @@ resource "aws_instance" "app_server" {
     Environment = var.environment
   }
 }
+
+
+# data.terraform_remote_state.remote_data.outputs.security_group_id

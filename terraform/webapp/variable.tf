@@ -6,7 +6,7 @@ variable "aws_region" {
 variable "environment" {
   description = "Environment name"
   type        = string
-  default     = "dev"
+  default     = "docker-ecr"
 }
 
 variable "project_name" {
@@ -28,12 +28,12 @@ variable "instance_type" {
   default     = "t2.micro"
 }
 
-variable "subnet_id" {
-  description = "Subnet ID"
-  type        = string
-}
+# variable "subnet_id" {
+#   description = "Subnet ID"
+#   type        = string
+# }
 
-variable "security_group_id" {
-  description = "Security group ID"
-  type        = string
-}
+# variable "security_group_id" {
+#   description = "Security group ID"
+#   type        = string
+# }
