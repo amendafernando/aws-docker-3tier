@@ -8,3 +8,5 @@ A multi-container deployment project using Docker, AWS ECR, and Terraform
 
 
 # GitHub Actions
+
+Github actions are set up to create a workflow to checkout code create docker containers and push it to relevent repos when merge it into main branch
