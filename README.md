@@ -11,4 +11,11 @@ A multi-container deployment project using Docker, AWS ECR, and Terraform
 
 Github actions are set up to create a workflow to checkout code create docker containers and push it to relevent repos when merge it into main branch
 
-adding line 3
+## Workflow
+
+1. Update the code in seperate branch
+2. create a PR to main branch
+3. When approved run the GitHub workflow
+4. It will checkout the main branch to cloud9
+5. It will create Dockers accordingly
+6. It will push the dockers to relevent ECR repos
