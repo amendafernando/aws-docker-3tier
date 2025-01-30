@@ -33,7 +33,7 @@ jobs:
           context: .
           file: ./Dockerfile_mysql
           push: true
-          tags: ${{ steps.login-ecr.outputs.registry }}/mysql:${{ github.run_number }}
+          tags: ${{ steps.login-ecr.outputs.registry }}/mysql:0.${{ github.run_number }}
 
       - name: Build and push application image
         id: build-and-push-app
@@ -42,4 +42,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ steps.login-ecr.outputs.registry }}/application:${{ github.run_number }}    
+          tags: ${{ steps.login-ecr.outputs.registry }}/application:0.${{ github.run_number }}    
