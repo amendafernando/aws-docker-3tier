@@ -22,3 +22,6 @@ Github actions are set up to create a workflow to checkout code create docker co
 
 #### Kubernates intergration will be done in the `containerized-app-on-kubernetes` repository
 
+https://github.com/amendafernando/containerized-app-on-kubernetes.git
+
+
