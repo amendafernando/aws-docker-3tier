@@ -7,7 +7,7 @@ import argparse
 
 app = Flask(__name__)
 
-DBHOST = os.environ.get("DBHOST") or "localhost"
+DBHOST = os.environ.get("DBHOST") or "mysql-service.mysql-namespace.svc.cluster.local"
 DBUSER = os.environ.get("DBUSER") or "root"
 DBPWD = os.environ.get("DBPWD") or "passwors"
 DATABASE = os.environ.get("DATABASE") or "employees"
