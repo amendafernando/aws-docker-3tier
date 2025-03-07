@@ -24,4 +24,6 @@ Github actions are set up to create a workflow to checkout code create docker co
 
 https://github.com/amendafernando/containerized-app-on-kubernetes.git
 
+@author Amenda Fernando Thommage
+
 
