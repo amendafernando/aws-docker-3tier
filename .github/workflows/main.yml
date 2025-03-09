@@ -43,5 +43,5 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          # tags: ${{ steps.login-ecr.outputs.registry }}/application:0.${{ github.run_number }}
-          tags: ${{ steps.login-ecr.outputs.registry }}/application:latest
+          tags: ${{ steps.login-ecr.outputs.registry }}/application:0.${{ github.run_number }}
+          # tags: ${{ steps.login-ecr.outputs.registry }}/application:latest
