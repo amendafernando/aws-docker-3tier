@@ -20,7 +20,7 @@ Github actions are set up to create a workflow to checkout code create docker co
 5. It will create Dockers accordingly
 6. It will push the dockers to relevent ECR repos
 
-#### Kubernates intergration will be done in the `containerized-app-on-kubernetes` repository
+#### Kubernates intergration will be done in the `containerized-app-on-kubernetes` repository (Kind, kubectl)
 
 https://github.com/amendafernando/containerized-app-on-kubernetes.git
 
